@@ -27,6 +27,10 @@ socket.on('disconnect', () => {
     lblOffline.style.display = '';
 });
 
+socket.on('enviar-mensaje', (payload) => {
+    console.log(payload);
+});
+
 
 
 btnEnviar.addEventListener( 'click', () => {
@@ -36,5 +40,7 @@ btnEnviar.addEventListener( 'click', () => {
         id: '1234',
         fecha: new Date()
     }
-    socket.emit('enviar-mensaje', payload);
+    socket.emit('enviar-mensaje', payload, ( id ) => {
+        console.log('desde el server', id);
+    });
 });
