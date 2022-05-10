@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Client</title>
+    <style>
+        #online, #offline {
+            padding:5px;
+            color: white;
+            border-radius: 5px;
+        }
+        #online {
+            background-color:green;
+        }
+        #offline {
+            background-color: red;
+        }
+        .mi-input{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Socket Client Holiwi 👋</h1>
+    <hr>
+    <p>
+        Server Status: <span id="online">Online</span><span id="offline">Offline</span>
+    </p>
+    <div>
+        <input type="text" id="txt" class="mi-input" placeholder="Escribe mensaje">
+        <button id="btnEnviar">Enviar</button>
+    </div>
+
+
+
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="js/socket-client.js"></script>
+</body>
+</html>
