@@ -5,11 +5,6 @@ const txt = document.getElementById("txt");
 const btnEnviar = document.getElementById("btnEnviar");
 
 
-
-
-
-
-
 const socket = io();
 
 socket.on('connect', () => {
